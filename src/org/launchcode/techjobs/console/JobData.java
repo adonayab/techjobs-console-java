@@ -47,12 +47,18 @@ public class JobData {
         return values;
     }
 
+    // a getter for allJobs
+    private static ArrayList<HashMap<String, String>> getAllJobs() {
+        loadData();
+        return allJobs;
+    }
+
     public static ArrayList<HashMap<String, String>> findAll() {
 
         // load data, if not already loaded
-        loadData();
+//        loadData();
 
-        return allJobs;
+        return getAllJobs();
     }
 
     /**
